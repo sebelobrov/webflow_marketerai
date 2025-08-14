@@ -1,0 +1,13 @@
+{
+  "framework": "nextjs",
+  "build": {
+    "installCommand": "npm ci",
+    "buildCommand": "npm run build",
+    "outputDirectory": ".next"
+  },
+  "dev": {
+    "command": "npm run dev",
+    "port": 3000
+  },
+  "nodeVersion": "22.x"
+}
