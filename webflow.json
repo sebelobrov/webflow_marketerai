@@ -1,5 +1,6 @@
 {
   "cosmic": {
-    "framework": "nextjs"
+    "framework": "next",
+    "mountPath": "/app"
   }
 }
