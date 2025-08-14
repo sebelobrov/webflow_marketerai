@@ -3,9 +3,13 @@ import type { NextConfig } from "next";
 const mountPath = process.env.COSMIC_MOUNT_PATH;
 const basePath = mountPath && mountPath !== "/" ? mountPath : undefined;
 
-const nextConfig: NextConfig = {
+const config: NextConfig = {
   basePath,
   assetPrefix: basePath || undefined,
+  images: {
+    // В Edge среде (OpenNext/Cloudflare) оптимизацию изображений делает воркер, а не Node
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+export default config;
